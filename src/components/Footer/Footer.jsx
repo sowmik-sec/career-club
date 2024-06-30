@@ -1,3 +1,4 @@
+import footerImg from "../../assets/icons/social.png";
 function Footer() {
   return (
     <footer className="footer bg-base-200 text-base-content p-10">
@@ -7,7 +8,7 @@ function Footer() {
           There are many variations of passages of Lorem Ipsum , but the
           majority have suffered alteration in some form.
         </p>
-        <img className="w-28 h-10" src="../../assets/icons/social.png" alt="" />
+        <img className="w-28 h-10" src={footerImg} alt="" />
       </nav>
       <nav>
         <h6 className="footer-title">Services</h6>
