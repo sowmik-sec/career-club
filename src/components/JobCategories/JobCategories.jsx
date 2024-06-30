@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import JobCategory from "../JobCategory/JobCategory";
 
 function JobCategories() {
-  const [jobs, setJobs] = useState([]);
+  const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch("categories.json")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => setCategories(data));
   }, []);
   return (
     <div className="my-32">
@@ -18,7 +18,7 @@ function JobCategories() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        {jobs.map((job) => (
+        {categories.map((job) => (
           <JobCategory key={job.id} job={job} />
         ))}
       </div>
