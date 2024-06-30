@@ -1,4 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
+/* eslint-disable react/prop-types */
+import { useLocation, useNavigate } from "react-router-dom";
 import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import locationImg from "../../assets/icons/location2.png";
 import moneyImg from "../../assets/icons/money.png";
@@ -14,7 +15,12 @@ function FeaturedJob({ job }) {
     salary,
   } = job;
   const curLocation = useLocation();
-  console.log("location", curLocation);
+  const navigate = useNavigate();
+  // console.log("location", curLocation);
+  const handleJobDetails = (job) => {
+    console.log("inside navigate");
+    navigate("/job-details", { state: { job } });
+  };
   return (
     <div
       className={`mx-auto  border border-indigo-400 p-10 w-full rounded-md ${
@@ -41,9 +47,12 @@ function FeaturedJob({ job }) {
         </div>
       </div>
       <div>
-        <Link>
-          <ButtonPrimary padding={"px-4 py-2 mt-3"}>View Details</ButtonPrimary>
-        </Link>
+        <ButtonPrimary
+          onClick={() => handleJobDetails(job)}
+          padding={"px-4 py-2 mt-3"}
+        >
+          View Details
+        </ButtonPrimary>
       </div>
     </div>
   );
