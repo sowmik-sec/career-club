@@ -25,7 +25,7 @@ function FeaturedJobs() {
         ))}
       </div>
       <div className="text-center mt-10">
-        <Link>
+        <Link to={"applied-jobs"}>
           <ButtonPrimary padding={"px-7 py-4"}>See All Jobs</ButtonPrimary>
         </Link>
       </div>
