@@ -14,7 +14,7 @@ function Banner() {
           you need. Its your future. Come find it. <br /> Manage all your job
           application from start to finish.
         </p>
-        <ButtonPrimary btnText={"Get Started"} />
+        <ButtonPrimary>Get Started</ButtonPrimary>
       </div>
       <div>
         <img src={user1} alt="" />
