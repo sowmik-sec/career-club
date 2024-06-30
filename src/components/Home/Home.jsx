@@ -1,7 +1,13 @@
+import Banner from "../Banner/Banner";
+import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
+import JobCategories from "../JobCategories/JobCategories";
+
 function Home() {
   return (
-    <div>
-      <h2>This is home</h2>
+    <div className="container mx-auto">
+      <Banner />
+      <JobCategories />
+      <FeaturedJobs />
     </div>
   );
 }
