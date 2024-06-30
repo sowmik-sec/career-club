@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import ButtonPrimary from "../Button/ButtonPrimary";
+import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 
 function Header() {
   const links = (
@@ -51,7 +51,7 @@ function Header() {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <ButtonPrimary>Start Applying</ButtonPrimary>
+        <ButtonPrimary padding={"px-7 py-5"}>Start Applying</ButtonPrimary>
       </div>
     </nav>
   );

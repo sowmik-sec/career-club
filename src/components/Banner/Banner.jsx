@@ -1,5 +1,5 @@
-import ButtonPrimary from "../Button/ButtonPrimary";
 import user1 from "../../assets/images/user.png";
+import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 
 function Banner() {
   return (
@@ -14,7 +14,7 @@ function Banner() {
           you need. Its your future. Come find it. <br /> Manage all your job
           application from start to finish.
         </p>
-        <ButtonPrimary>Get Started</ButtonPrimary>
+        <ButtonPrimary padding={"px-7 py-5"}>Get Started</ButtonPrimary>
       </div>
       <div>
         <img src={user1} alt="" />
